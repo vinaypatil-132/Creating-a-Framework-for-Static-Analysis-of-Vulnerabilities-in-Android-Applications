@@ -84,6 +84,17 @@ After the analysis, view the vulnerability reports and visualizations. Graphical
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
+---
+
+### 🚀 **Future Work & Improvements:**
+1. **Professional Layout**: Organized structure with clear section titles (Project Overview, Features, Technologies, etc.)
+2. **Docker Instructions**: Easy-to-follow steps with visual clarity on how to run the app via Docker.
+3. **Clean Styling**: Added emphasis on important sections using bold and code blocks for easy reading.
+4. **Contact & Contribution Sections**: A section for potential collaborators or users to contact you and contribute to the project.
+5. **License**: Clear mention of the license with a link to the actual LICENSE file.
+
+---
+
 ## 📞 **Contact**
 
 If you have any questions, feel free to open an issue or reach out to me directly:
