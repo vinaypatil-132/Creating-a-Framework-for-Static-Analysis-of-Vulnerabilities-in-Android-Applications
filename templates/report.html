@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APK Analysis Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>APK Analysis Report</h1>
+    <div>
+        <h3>Permissions Overview</h3>
+        <canvas id="permissionsChart" width="400" height="400"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('permissionsChart').getContext('2d');
+        const chartData = {{ permissions_data | tojson }};
+        
+        const permissionsChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: chartData.labels,
+                datasets: [{
+                    label: 'Permissions',
+                    data: chartData.data,
+                    backgroundColor: chartData.colors,
+                }]
+            },
+        });
+    </script>
+
+    <h3>Download Results</h3>
+    <a href="{{ json_output }}" download>Download JSON Report</a><br>
+    <a href="{{ pdf_output }}" download>Download PDF Report</a>
+</body>
+</html>

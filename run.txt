@@ -1,0 +1,4 @@
+
+Run Using Docker:
+
+docker run vinu890/apk-analyzer:02

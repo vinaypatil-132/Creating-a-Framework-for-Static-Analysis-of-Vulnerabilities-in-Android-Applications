@@ -1,0 +1,6 @@
+flask==2.3.2
+matplotlib==3.8.2
+androguard==3.3.5
+reportlab==4.0.8
+
+

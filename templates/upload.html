@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APK Analyzer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* Custom glow effect */
+        .glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex flex-col items-center justify-center animate__animated animate__fadeIn">
+
+    <div class="bg-white shadow-2xl rounded-3xl p-10 w-full max-w-md transform hover:scale-105 transition-transform duration-300 ease-in-out glow">
+        <h1 class="text-3xl font-extrabold mb-8 text-center text-blue-600 animate__animated animate__fadeInDown">Upload APK for Static Analysis</h1>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="flex flex-col gap-6 animate__animated animate__fadeInUp">
+            <label class="flex flex-col items-center justify-center border-4 border-dashed border-blue-300 p-6 rounded-lg cursor-pointer hover:bg-blue-50 transition">
+                <span class="text-blue-400 font-semibold mb-2">Click to select APK</span>
+                <input type="file" name="apkfile" required class="hidden">
+            </label>
+            <button type="submit" class="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-indigo-500 hover:to-blue-500 text-white font-bold py-3 rounded-xl transition duration-300 shadow-md hover:shadow-lg">
+                Analyze APK
+            </button>
+        </form>
+
+        {% if json_file and pdf_file %}
+            <div class="mt-8 animate__animated animate__fadeInUp">
+                <h2 class="text-lg font-semibold mb-4 text-gray-700 text-center">Download Your Reports</h2>
+                <ul class="list-none flex flex-col gap-3 items-center">
+                    <li>
+                        <a href="/download/{{ json_file }}" class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full hover:bg-blue-200 transition">
+                            📄 Download JSON Report
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/download/{{ pdf_file }}" class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full hover:bg-blue-200 transition">
+                            📄 Download PDF Report
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

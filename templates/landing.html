@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APK Analyzer - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <header class="flex justify-between items-center p-6 max-w-7xl mx-auto w-full">
+        <div class="text-2xl font-extrabold text-blue-600 animate__animated animate__fadeInLeft">
+            APK Analyzer
+        </div>
+        <nav class="space-x-6 animate__animated animate__fadeInRight">
+            <a href="#features" class="text-blue-700 hover:underline font-semibold">Features</a>
+            <a href="#upload" class="text-blue-700 hover:underline font-semibold">Upload APK</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center text-center px-6 pt-10 md:pt-20 animate__animated animate__fadeInUp">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-blue-700 mb-6 leading-tight">
+            Effortless APK Static Analysis Advanced
+        </h1>
+        <p class="text-lg md:text-2xl text-gray-600 mb-8 max-w-2xl">
+            Upload your APK file and get a detailed static analysis report in just a few clicks. Fast, secure, and easy to use.
+        </p>
+        <a href="/upload" class="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-indigo-500 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition shadow-lg hover:shadow-2xl">
+            start Analyzer
+        </a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="mt-20 px-6 md:px-0 max-w-5xl mx-auto animate__animated animate__fadeInUp">
+        <h2 class="text-3xl font-bold text-center text-blue-600 mb-10">Key Features</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-white p-8 rounded-3xl glow text-center hover:scale-105 transition-transform">
+                <h3 class="text-xl font-bold mb-4 text-indigo-600">Deep Analysis</h3>
+                <p class="text-gray-600">
+                    Extract detailed insights about APK structure, permissions, and vulnerabilities.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl glow text-center hover:scale-105 transition-transform">
+                <h3 class="text-xl font-bold mb-4 text-indigo-600">Instant Reports</h3>
+                <p class="text-gray-600">
+                    Download JSON and PDF reports instantly after analysis, no waiting time.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl glow text-center hover:scale-105 transition-transform">
+                <h3 class="text-xl font-bold mb-4 text-indigo-600">Secure Uploads</h3>
+                <p class="text-gray-600">
+                    Your files are processed securely and deleted after analysis to ensure privacy.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="upload" class="mt-20 px-6 md:px-0 max-w-5xl mx-auto text-center animate__animated animate__fadeInUp">
+        <h2 class="text-3xl font-bold text-blue-600 mb-6">Ready to Analyze?</h2>
+        <p class="text-lg text-gray-600 mb-8">Upload your APK now and see the results instantly.</p>
+        <a href="/upload" class="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-indigo-500 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition shadow-lg hover:shadow-2xl">
+            Upload APK
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-20 mb-6 text-center text-gray-400 text-sm">
+        &copy; 2025 APK Analyzer. All rights reserved.
+    </footer>
+
+</body>
+</html>
